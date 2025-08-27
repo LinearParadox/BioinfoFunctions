@@ -2,8 +2,8 @@ Package: BioinfFunctions
 Title: What the Package Does (One Line, Title Case)
 Version: 0.0.0.9000
 Authors@R: 
-    person("First", "Last", , "first.last@example.com", role = c("aut", "cre"))
-Description: What the package does (one paragraph).
+    person("Alexei", "Martsinkovskiy", , "first.last@example.com", role = c("aut", "cre"))
+Description: A small package that has a wrapper aroundmy really common workflows I do. Mostly built as a learning experience in how to build R pacakges
 License: `use_mit_license()`, `use_gpl3_license()` or friends to pick a
     license
 Encoding: UTF-8
