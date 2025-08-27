@@ -12,6 +12,7 @@ run_gsea(
   name = "gene_id",
   min.size = 10,
   max.size = 500,
+  ranking = c("logpfc", "FC", "signp"),
   pcutoff = 0.05,
   eps = 1e-10
 )
@@ -31,11 +32,11 @@ run_gsea(
 
 \item{max.size}{max gs size for gsea}
 
+\item{ranking}{ranking metric for genes. "signp" for signlogFC*Pval, "FC" for logFC, logpfc for -logp\*FC}
+
 \item{pcutoff}{P value cutoff for returned genes}
 
 \item{eps}{boundary for calculating p value}
-
-\item{ranking}{ranking metric for genes. "signp" for signlogFC*Pval, "FC" for logFC, logpfc for -logp\*FC}
 }
 \description{
 Plot GSEA results
