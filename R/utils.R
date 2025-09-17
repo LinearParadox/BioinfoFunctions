@@ -6,8 +6,8 @@
 #' @param keytype keytypes to search mart
 #' @param value value to return
 #'
-#' @import biomaRt
-#' @import dplyr
+#' @importFrom biomaRt select
+#' @importFrom dplyr select filter
 #' @export
 ortho_map <- function(geneset, mart, keytype='ensembl_gene_id',
                       value='mmusculus_homolog_ensembl_gene'){
@@ -30,4 +30,17 @@ ortho_map <- function(geneset, mart, keytype='ensembl_gene_id',
 #' @export
 strip_version <- function(genes){
   return(gsub("\\..*", "", genes))
+}
+
+#' Returns whether a string is a color
+#' Credit from https://stackoverflow.com/questions/13289009/check-if-character-string-is-a-valid-color-representation
+#' @noRd
+
+#'
+#' @param x string to test for color or not
+
+isColor <- function(x)
+{
+  res <- try(col2rgb(x), silent = TRUE)
+  return(!"try-error" %in% class(res))
 }
