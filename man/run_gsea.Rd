@@ -14,7 +14,8 @@ run_gsea(
   max.size = 500,
   ranking = c("logpfc", "FC", "signp"),
   pcutoff = 0.05,
-  eps = 1e-10
+  eps = 0,
+  seed = F
 )
 }
 \arguments{
@@ -37,6 +38,8 @@ run_gsea(
 \item{pcutoff}{P value cutoff for returned genes}
 
 \item{eps}{boundary for calculating p value}
+
+\item{seed}{whether to set seed for gsea. Uses the environments seed from the set.seed function}
 }
 \description{
 Plot GSEA results

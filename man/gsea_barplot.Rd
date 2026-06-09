@@ -12,16 +12,22 @@ gsea_barplot(
   return.type = c("patchwork", "list")
 )
 }
-\description{
-@importFrom patchwork wrap_plots
-@importFrom ggplot2 title
-@param gseaRes GSEA results from run_gsea
-@param n number of pathways to plot
-@param direction which direction to plot. all plots all,
+\arguments{
+\item{gseaRes}{GSEA results from run_gsea}
+
+\item{n}{number of pathways to plot}
+
+\item{direction}{which direction to plot. all plots all,
 both plots up and down in one graph
-up and down plot only up and down respectively
-@param fill what color to use for fill. Can be a vector of length 2,
-a color string which will be reused or a column in GSEA res
-@param return.type whether to return a patchwork object or a list of plots
-@param sort.by  what to sort by in the case of the both option
+up and down plot only up and down respectively}
+
+\item{fill}{what color to use for fill. Can be a vector of length 2,
+a color string which will be reused or a column in GSEA res}
+
+\item{return.type}{whether to return a patchwork object or a list of plots}
+
+\item{sort.by}{what to sort by in the case of the both option}
+}
+\description{
+Wrapper function around various barplots for gsea
 }
