@@ -15,7 +15,8 @@ run_gsea(
   ranking = c("logpfc", "FC", "signp"),
   pcutoff = 0.05,
   eps = 0,
-  seed = FALSE
+  seed = FALSE,
+  method = "multilevel"
 )
 }
 \arguments{
@@ -40,6 +41,8 @@ run_gsea(
 \item{eps}{boundary for calculating p value}
 
 \item{seed}{whether to set seed for gsea.}
+
+\item{method}{method for GSEA}
 }
 \description{
 Plot GSEA results
