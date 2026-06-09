@@ -15,7 +15,7 @@ run_gsea(
   ranking = c("logpfc", "FC", "signp"),
   pcutoff = 0.05,
   eps = 0,
-  seed = NULL
+  seed = FALSE
 )
 }
 \arguments{

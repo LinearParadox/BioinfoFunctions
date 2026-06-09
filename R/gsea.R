@@ -20,10 +20,7 @@ run_gsea <- function(results, geneset, p="PValue",
                      logFC="logFC", name="gene_id",
                      min.size=10, max.size=500,
                      ranking=c("logpfc", "FC", "signp"),
-                     pcutoff=0.05, eps=0.0, seed=NULL){
-  if (seed != NULL){
-    withr::local_seed(seed)
-  }
+                     pcutoff=0.05, eps=0.0, seed=FALSE){
   ranking <- match.arg(ranking)
   results<-results %>% dplyr::distinct(.data[[name]], .keep_all = T) %>%
     dplyr::filter(.data[[name]] !="" & !is.na(.data[[name]]))
