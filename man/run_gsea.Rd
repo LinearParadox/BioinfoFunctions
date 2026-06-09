@@ -15,7 +15,7 @@ run_gsea(
   ranking = c("logpfc", "FC", "signp"),
   pcutoff = 0.05,
   eps = 0,
-  seed = F
+  seed = NULL
 )
 }
 \arguments{
@@ -39,7 +39,7 @@ run_gsea(
 
 \item{eps}{boundary for calculating p value}
 
-\item{seed}{whether to set seed for gsea. Uses the environments seed from the set.seed function}
+\item{seed}{whether to set seed for gsea.}
 }
 \description{
 Plot GSEA results

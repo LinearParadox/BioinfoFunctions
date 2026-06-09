@@ -10,7 +10,7 @@
 #' @param min.size min gs size for GSEA
 #' @param max.size max gs size for gsea
 #' @param eps boundary for calculating p value
-#' @param seed whether to set seed for gsea. Uses the environments seed from the set.seed function
+#' @param seed whether to set seed for gsea. 
 #' 
 #' @importFrom clusterProfiler GSEA
 #' @importFrom dplyr filter distinct
@@ -20,7 +20,10 @@ run_gsea <- function(results, geneset, p="PValue",
                      logFC="logFC", name="gene_id",
                      min.size=10, max.size=500,
                      ranking=c("logpfc", "FC", "signp"),
-                     pcutoff=0.05, eps=0.0, seed=F){
+                     pcutoff=0.05, eps=0.0, seed=NULL){
+  if (seed != NULL){
+    withr::local_seed(seed)
+  }
   ranking <- match.arg(ranking)
   results<-results %>% dplyr::distinct(.data[[name]], .keep_all = T) %>%
     dplyr::filter(.data[[name]] !="" & !is.na(.data[[name]]))
